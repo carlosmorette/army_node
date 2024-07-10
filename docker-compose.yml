@@ -1,0 +1,17 @@
+services:
+  soldier1:
+    build: .
+    networks:
+      - nodes
+    ports:
+      - 4000:4000
+
+  soldier2:
+    build: .
+    networks:
+      - nodes
+    ports:
+      - 4001:4001
+
+networks:
+  nodes:

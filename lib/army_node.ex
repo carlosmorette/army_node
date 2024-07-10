@@ -1,0 +1,2 @@
+defmodule ArmyNode do
+end
