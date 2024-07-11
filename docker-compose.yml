@@ -3,15 +3,15 @@ services:
     build: .
     networks:
       - nodes
-    ports:
-      - 4000:4000
+    environment:
+      - SERVICE_NAME=soldier1
 
   soldier2:
     build: .
     networks:
       - nodes
-    ports:
-      - 4001:4001
+    environment:
+      - SERVICE_NAME=soldier2
 
 networks:
   nodes:
