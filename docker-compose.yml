@@ -13,5 +13,27 @@ services:
     environment:
       - SERVICE_NAME=soldier2
 
+  soldier3:
+    build: .
+    networks:
+      - nodes
+    environment:
+      - SERVICE_NAME=soldier3
+
+  soldier4:
+    build: .
+    networks:
+      - nodes
+    environment:
+      - SERVICE_NAME=soldier4
+
+  soldier5:
+    build: .
+    networks:
+      - nodes
+    environment:
+      - SERVICE_NAME=soldier5
+
+
 networks:
   nodes:

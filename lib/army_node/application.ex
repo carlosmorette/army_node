@@ -4,7 +4,8 @@ defmodule ArmyNode.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      ArmyNode.Message.Queue
+      ArmyNode.Message.Queue,
+      ArmyNode.Nodes
     ]
 
     opts = [strategy: :one_for_one, name: ArmyNode.Supervisor]

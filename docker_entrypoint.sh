@@ -1,5 +1,4 @@
 #!/bin/bash
-ERLANG_COOKIE="RANDOM-HASH"
-
+erlang_cookie="RANDOM-HASH"
 node_name="${SERVICE_NAME}@${SERVICE_NAME}"
-iex --cookie $ERLANG_COOKIE --sname $node_name -S mix
+iex --cookie $erlang_cookie --sname $node_name -S mix
