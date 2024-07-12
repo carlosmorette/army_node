@@ -6,6 +6,7 @@ defmodule ArmyNode.Application do
     children = [
       ArmyNode.Message.Queue,
       ArmyNode.Nodes
+      #ArmyNode.Clients.Mnesia
     ]
 
     opts = [strategy: :one_for_one, name: ArmyNode.Supervisor]
