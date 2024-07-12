@@ -26,3 +26,5 @@ army_node-*.tar
 /tmp/
 
 todos.txt
+
+Mnesia*

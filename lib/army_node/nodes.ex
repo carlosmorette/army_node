@@ -4,9 +4,9 @@ defmodule ArmyNode.Nodes do
   @nodes Application.compile_env(:army_node, [__MODULE__, :nodes])
 
   @impl true
-  def init(state) do
+  def init(nodes) do
     schedule_health_check(1)
-    {:ok, Enum.map(state, &ArmyNode.Node.new/1)}
+    {:ok, Enum.map(nodes, &ArmyNode.Node.new/1)}
   end
 
   def start_link(_opts) do
@@ -20,7 +20,7 @@ defmodule ArmyNode.Nodes do
   end
 
   @impl true
-  def handle_call(:get_nodes, _from, state) do
+  def handle_call(:get_state, _from, state) do
     {:reply, state, state}
   end
 

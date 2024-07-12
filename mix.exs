@@ -14,15 +14,13 @@ defmodule ArmyNode.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :mnesia],
       mod: {ArmyNode.Application, []}
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [
-      {:libcluster, "3.3.3"}
-    ]
+    []
   end
 end
